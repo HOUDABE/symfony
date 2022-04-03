@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
@@ -14,6 +15,48 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+  
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active"  href="{{ path('app_accueil') }}">Home
+          
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_produit_index') }}">produit</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_contact') }}">contacy</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_tva') }}">TVA</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+        </li>
+      
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+
+   MENU:
+     <a href="{{ path('app_accueil') }}">Home</a> 
+     <a href="{{ path('app_produit_index') }}">Produit</a> 
+      <a href="{{ path('app_contact') }}">Contact</a> 
+      <a href="{{ path('app_tva') }}">TVA</a> 
+        {% block body %}
+
+        {% endblock %}
+
+
     </body>
 </html>

@@ -15,5 +15,5 @@ if (is_file(dirname(__DIR__).'/vendor/phpunit/phpunit/phpunit')) {
         exit(1);
     }
 
-    require dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php';
+    require dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpcdunit.php';
 }
